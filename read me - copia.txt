@@ -1,0 +1,67 @@
+Para ejecutar laravel...
+
+1- luego de hacer "git clone" , ejecutar en el cmd "composer install"
+
+2- crear un archivo llamado ".env" (preferiblemente crearlo desde sublitext o atom) y colocarlo dentro carpeta Laravel.
+Dicho archivo debe contener lo siguiente (recordar colocar su user y password de mysql ):
+
+		APP_ENV=local
+		APP_KEY=base64:hmoy54Fc7h0hwvelfpZAeiAKmNVFZ9ifSNFUlCxgDac=
+		APP_DEBUG=true
+		APP_LOG_LEVEL=debug
+		APP_URL=http://localhost
+		
+		DB_CONNECTION=mysql
+		DB_HOST=127.0.0.1
+		DB_PORT=3306
+		DB_DATABASE=sismat-una
+		DB_USERNAME=system
+		DB_PASSWORD=root
+		
+		BROADCAST_DRIVER=log
+		CACHE_DRIVER=file
+		SESSION_DRIVER=file
+		QUEUE_DRIVER=sync
+		
+		REDIS_HOST=127.0.0.1
+		REDIS_PASSWORD=null
+		REDIS_PORT=6379
+		
+		MAIL_DRIVER=smtp
+		MAIL_HOST=mailtrap.io
+		MAIL_PORT=2525
+		MAIL_USERNAME=null
+		MAIL_PASSWORD=null
+		MAIL_ENCRYPTION=null
+		
+		PUSHER_APP_ID=
+		PUSHER_KEY=
+		PUSHER_SECRET=
+php artisan migrate
+3- ejecutar "php artisan key:generate"		
+		
+4- ejecutar "php artisan db:seed", para que cree un usuario por defecto para poder logear.
+
+5- ejecutar "php artisan serve". usuario por defecto para logearse-> id=gg , password=12345678
+
+php artisan serve --host=192.168.0.130 --port=80
+
+php artisan migrate:reset
+php artisan migrate
+
+comandos erick
+git add (ruta de las cosas nuevas)
+git commit -am 'asunto'
+git push
+
+
+
+git pull (actualiar)
+
+
+git status (ver cambios )
+
+
+git fetch --all    
+git reset --hard origin/master
+		

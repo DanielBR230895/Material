@@ -1,0 +1,8 @@
+use sismat; /*usa sismat*/
+alter table carreras modify nombre varchar(300); /*aumenta el tamano de la carrera*/
+alter table talleres drop foreign key talleres_modulo_foreign;/*drop al foreign key*/
+alter table talleres modify modulo varchar(10);
+alter table modulos modify codigo varchar(10);
+/*agrega de nuevo el foreign key*/
+alter table talleres add constraint talleres_modulo_foreign foreign key (modulo) references modulos(codigo) on delete set null;
+
